@@ -22,7 +22,7 @@ class NoNameWidget(object):
         css = {
             'all': ('zebra/card-form.css',)
         }
-        js = ('zebra/card-form.js', 'https://js.stripe.com/v1/')
+        js = ('zebra/card-form.js', 'https://js.stripe.com/v2/')
 
 
 
