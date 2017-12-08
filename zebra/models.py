@@ -54,8 +54,8 @@ if options.ZEBRA_ENABLE_APP:
 
     @python_2_unicode_compatible
     class Subscription(DatesModelBase, StripeSubscription):
-        customer = models.ForeignKey(Customer)
-        plan = models.ForeignKey(Plan)
+        customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+        plan = models.ForeignKey(Plan, on_delete=models.CASCADE)
 
         def __str__(self):
             return "%s: %s" % (self.customer, self.plan)
